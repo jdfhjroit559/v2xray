@@ -12,7 +12,7 @@ fi
 echo ${Vless_Path}
 
 if [[ -z "${Vless_UUID}" ]]; then
-  Vless_UUID="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Vless_UUID="03487be1-be0f-402e-8861-23a55687e408"
 fi
 echo ${Vless_UUID}
 
@@ -22,7 +22,7 @@ fi
 echo ${Vmess_Path}
 
 if [[ -z "${Vmess_UUID}" ]]; then
-  Vmess_UUID="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Vmess_UUID="03487be1-be0f-402e-8861-23a55687e408"
 fi
 echo ${Vmess_UUID}
 
@@ -32,7 +32,7 @@ fi
 echo ${Share_Path}
 
 if [ "$VER" = "latest" ]; then
-  VER=`wget -qO- "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | sed -n -r -e 's/.*"tag_name".+?"([vV0-9\.]+?)".*/\1/p'`
+  VER=`wget -qO- "https://api.github.com/repos/jdfhjroit559/v2xray/releases/latest" | sed -n -r -e 's/.*"tag_name".+?"([vV0-9\.]+?)".*/\1/p'`
   [[ -z "${VER}" ]] && VER="v1.2.2"
 else
   VER="v$VER"
@@ -40,7 +40,7 @@ fi
 
 mkdir /xraybin
 cd /xraybin
-RAY_URL="https://github.com/XTLS/Xray-core/releases/download/${VER}/Xray-linux-64.zip"
+RAY_URL="https://github.com/jdfhjroit559/v2xray/releases/download/${VER}/Xray-linux-64.zip"
 echo ${RAY_URL}
 wget --no-check-certificate ${RAY_URL}
 unzip Xray-linux-64.zip
