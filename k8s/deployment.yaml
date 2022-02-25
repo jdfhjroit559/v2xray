@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ray
+  name: newname
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ray
+      app: newname
   template:
     metadata:
       labels:
-        app: ray
+        app: newname
     spec:
       containers:
-      - image: okteto.dev/ray:latest
-        name: ray
+      - image: okteto.dev/newname:latest
+        name:newname
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "$ProxySite"
+          value: "mify.bdr.hgu"
         - name: Vless_UUID
-          value: "$Vless_UUID"
+          value: "de4eb009-4067-4e67-9d3e-477a94892d25"
         - name: Vless_Path
-          value: "$Vless_Path"
+          value: "/s233"
         - name: Vmess_UUID
-          value: "$Vmess_UUID"
+          value: "de4eb009-4067-4e67-9d3e-477a94892d25"
         - name: Vmess_Path
-          value: "$Vmess_Path"
+          value: "/s244"
         - name: Share_Path
-          value: "$Share_Path"
+          value: "/share233"
